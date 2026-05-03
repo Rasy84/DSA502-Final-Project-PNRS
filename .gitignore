@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+
+# Jupyter
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# ChromaDB (regenerate by running the notebook RAG cells)
+chroma_db/
+
+# ML / cache
+*.pkl
+*.joblib
+*.h5
+*.pt
+*.pth
+.cache/
+*.log
+
+# Jupyter execution metadata (optional noise)
+**/.jupyter/
+
+# Large local exports (keep source notebook; regenerate HTML if needed)
+# Uncomment if you do not want HTML in the repo:
+# *.html
