@@ -1,5 +1,7 @@
 # AI-Powered Personalized Nutrition Recommendation System
 
+**Repository:** [github.com/Rasy84/DSA502-Final-Project-PNRS](https://github.com/Rasy84/DSA502-Final-Project-PNRS)
+
 **Course:** DSA 502 · **Author:** Abu Hanif
 
 Short overview: this project builds an end-to-end pipeline from exercise and body data to calorie estimation, nutrition-aware food and recipe suggestions, charts, and a **RAG-based local AI assistant** using **Ollama**—with **no OpenAI or paid cloud LLM API keys**.
@@ -92,7 +94,7 @@ Keep the Ollama app or daemon running while you execute the AI/RAG cells.
 ### 3. Jupyter
 
 ```bash
-jupyter notebook "Hanif_DSA 502 Final Project.ipynb"
+jupyter notebook "Hanif_DSA 502 Final Project (PNRS).ipynb"
 ```
 
 Run cells **top to bottom** the first time so dataframes, the trained model, and RAG documents all exist before the Chroma and Ollama sections.
@@ -131,8 +133,9 @@ The notebook builds the vector store in memory by default. If you add a persiste
 ## Repository layout (expected)
 
 ```
-├── Hanif_DSA 502 Final Project.ipynb   # main deliverable
-├── Hanif_DSA 502_Final Project.html    # optional export for viewing
+├── Hanif_DSA 502 Final Project (PNRS).ipynb   # main deliverable
+├── Hanif_DSA 502 Final Project (PNRS).html    # optional export for viewing
+├── Hanif_DSA 502 Final Project (PNRS).pdf     # PDF report
 ├── requirements.txt
 ├── README.md
 ├── .gitignore
@@ -142,4 +145,6 @@ The notebook builds the vector store in memory by default. If you add a persiste
 └── Receipes from around the world.xlsx
 ```
 
-If you regenerate HTML from Jupyter, overwrite `Hanif_DSA 502_Final Project.html` and commit when you want an updated static copy.
+If you regenerate HTML from Jupyter, overwrite `Hanif_DSA 502 Final Project (PNRS).html` and commit when you want an updated static copy.
+
+**PDF report:** generate an HTML export (`jupyter nbconvert --to html --no-input "Hanif_DSA 502 Final Project (PNRS).ipynb"`), open it in a browser, and use **Print → Save as PDF**. Alternatively, `jupyter nbconvert --to webpdf` works on setups where Playwright can launch Chromium.
