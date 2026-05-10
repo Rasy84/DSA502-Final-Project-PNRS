@@ -135,7 +135,8 @@ The notebook builds the vector store in memory by default. If you add a persiste
 ```
 ├── Hanif_DSA 502 Final Project (PNRS).ipynb   # main deliverable
 ├── Hanif_DSA 502 Final Project (PNRS).html    # optional export for viewing
-├── Hanif_DSA 502 Final Project (PNRS).pdf     # PDF report
+├── Hanif_DSA 502 Final Project (PNRS).pdf     # written course report (see below)
+├── build_written_report_pdf.py                # regenerates the PDF report from project facts
 ├── requirements.txt
 ├── README.md
 ├── .gitignore
@@ -147,4 +148,10 @@ The notebook builds the vector store in memory by default. If you add a persiste
 
 If you regenerate HTML from Jupyter, overwrite `Hanif_DSA 502 Final Project (PNRS).html` and commit when you want an updated static copy.
 
-**PDF report:** generate an HTML export (`jupyter nbconvert --to html --no-input "Hanif_DSA 502 Final Project (PNRS).ipynb"`), open it in a browser, and use **Print → Save as PDF**. Alternatively, `jupyter nbconvert --to webpdf` works on setups where Playwright can launch Chromium.
+**PDF report (written summary):** the file `Hanif_DSA 502 Final Project (PNRS).pdf` is a **structured course report** (abstract, methods, results table, recommendations, RAG, conclusions) derived from the notebook, not a full notebook printout. Regenerate after `pip install -r requirements.txt`:
+
+```bash
+python build_written_report_pdf.py
+```
+
+Optional: for a **full notebook PDF**, export HTML (`jupyter nbconvert --to html --no-input "Hanif_DSA 502 Final Project (PNRS).ipynb"`) and use the browser **Print → Save as PDF**, or use `jupyter nbconvert --to webpdf` where Chromium/Playwright works.
